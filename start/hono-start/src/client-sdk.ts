@@ -8,5 +8,5 @@ const HOST = `http://localhost:${PORT}`;
 export const client = hc<AppRoute>(HOST);
 
 export const trpcClient = createTRPCProxyClient<TRPCRouter>({
-  links: [httpBatchLink({ url: HOST })],
+  links: [httpBatchLink({ url: `${HOST}/trpc` })],
 });
